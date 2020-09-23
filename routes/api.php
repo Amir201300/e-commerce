@@ -41,9 +41,7 @@ Route::middleware('auth:api')->group(function () {
 Route::prefix('Auth_general')->group(function()
 {
     Route::post('/register', 'Api\UserController@register')->name('user.register');
-    Route::post('/register_social', 'Api\UserController@register_social')->name('user.register_social');
     Route::post('/login', 'Api\UserController@login')->name('user.login');
-    Route::post('/login_social', 'Api\UserController@login_social')->name('user.login_social');
     Route::get('/check_virfuy/{id}', 'Api\UserController@check_virfuy')->name('user.check_virfuy');
     Route::post('/forget_password', 'Api\UserController@forget_password')->name('user.forget_password');
     Route::post('/reset_password', 'Api\UserController@reset_password')->name('user.reset_password');
